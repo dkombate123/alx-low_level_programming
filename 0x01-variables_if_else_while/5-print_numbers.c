@@ -10,7 +10,7 @@
 int main(void)
 {
 	int car;
-	
+
 	for (car = '0' ; car <= '9'  ; car++)
 	{
 		putchar (car);
