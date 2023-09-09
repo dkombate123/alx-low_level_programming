@@ -8,9 +8,8 @@
 
 int main(void)
 {
-	char chaine[] = "and that piece of art is useful\" - Dora Korpar,
-	    		 2015-10-19\n";
+	char c[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(1, chaine, sizeof(chaine) - 1);
+	write(1, c, sizeof(c) - 1);
 	return (1);
 }
