@@ -9,25 +9,21 @@
  */
 int main(void)
 {
-	int car;
-	int car1;
+	int car, car1;
 
-	for (car = '0' ; car <= '8'  ; car++)
+	for (car = 0; car <= 8; car++)
 	{
-		for (car1 = car+1 ; car1 <= '9'  ; car1++)
+		for (car1 = car + 1; car1 <= 9; car1++)
 		{
-			if (car != car1)
+			putchar(car + '0');
+			putchar(car1 + '0');
+			if (car != 8 || car1 != 9)
 			{
-				putchar (car + '0');
-				putchar (car1 + '0');
-				if (car != 8 || car1 != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-	putchar ('\n');
-	return (0);
+	putchar('\n');
+	return 0;
 }
