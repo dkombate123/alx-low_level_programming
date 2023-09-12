@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * print_alphabet - fonction that print lowercase alphabet
+ * print_alphabet - Entry point of the program
  *
- * */
+ * Return: 1 (Success)
+ */
 void print_alphabet(void)
 {
 	char c;
