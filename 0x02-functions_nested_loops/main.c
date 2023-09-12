@@ -5,8 +5,6 @@
  *
  * Return: 0 (Success)
  */
-
-
 int main()
 {
 	int r;
