@@ -5,19 +5,19 @@
  *
  * Return: 0 (Success)
  */
-int main()
+int main(void)
 {
 	int r;
 
 	print_alphabet();
 	print_alphabet_x10();
 	r = _islower('H');
-	_putchar(r + '0');
+	putchar(r + '0');
 	r = _islower('o');
-	_putchar(r + '0');
+	putchar(r + '0');
 	r = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
+	putchar(r + '0');
+	putchar('\n');
 	return (0);
 
 }
