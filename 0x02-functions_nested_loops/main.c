@@ -7,16 +7,20 @@
  */
 int main(void)
 {
-	int r;
+	int c;
 
-	print_alphabet();
-	print_alphabet_x10();
-	r = _islower('H');
-	putchar(r + '0');
-	r = _islower('o');
-	putchar(r + '0');
-	r = _islower(108);
-	putchar(r + '0');
+	c = _islower('T');
+	putchar(c + '0');
+	r = _islower('a');
+	putchar(c + '0');
+	r = _islower(208);
+	putchar(c + '0');
+	c = _islower('X');
+        putchar(c + '0');
+        r = _islower('B');
+        putchar(c + '0');
+        r = _islower('p');
+        putchar(c + '0');
 	putchar('\n');
 	return (0);
 
