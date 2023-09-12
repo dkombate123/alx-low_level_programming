@@ -10,12 +10,12 @@
  */
 
 
-int main()
+int main(void)
 {
-	char chaine[]="_putchar";
+	char chaine[] = "_putchar";
 	int i;
 
-	for(i=0; chaine[i]!='\0';i++)
+	for (i = 0; chaine[i] != '\0'; i++)
 	{
 		putchar(chaine[i]);
 	}
