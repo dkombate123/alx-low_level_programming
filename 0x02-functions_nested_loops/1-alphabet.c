@@ -3,7 +3,6 @@
 #include <stdlib.h>
 /**
  * print_alphabet - fonction that print lowercase alphabet
- *
  * 
  */
 void print_alphabet(void)
