@@ -3,9 +3,9 @@
 
 
 /**
- * main - Entry point of the program
+ * print_alphabet_x10 - Entry point of the program
  *
- * Return: 0 (Success)
+ * Return: 1 (Success)
  */
 void print_alphabet_x10(void)
 {
@@ -20,5 +20,5 @@ void print_alphabet_x10(void)
 		}
 		putchar('\n');
 	}
-	putchar('\n');
+	
 }
