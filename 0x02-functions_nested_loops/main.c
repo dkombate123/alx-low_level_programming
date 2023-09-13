@@ -8,7 +8,9 @@
 int main(void)
 {
 	int c;
-
+	
+	print_alphabet();
+	print_alphabet_x10();
 	c = _islower('T');
 	putchar(c + '0');
 	r = _islower('a');
