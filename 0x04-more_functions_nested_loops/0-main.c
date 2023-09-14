@@ -16,17 +16,23 @@
 
 int main()
 {
-	int r;
+	char c;
+       	int r;
 	
-	r = _isupper('H');
+	c='A';
+	r= _putchar(c);
+	_isupper(r);
 	_putchar(':');
-	_putchar(r + '0');
-	r = _isupper('o');
+	_putchar(' ');
+	_putchar(r+'0');
+	_putchar('\n');
+	c='a';
+	r= _putchar(c);
+	_isupper(r);
 	_putchar(':');
-	_putchar(r + '0');
-	_putchar(':');
-	r = _isupper(108);
-	_putchar(r + '0');
+	_putchar(' ');
+	_putchar(r+'0');
+	_putchar('\n');
 	return (0);
 
 
