@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  * isupper : function to determine if caracter is uppercase
  *

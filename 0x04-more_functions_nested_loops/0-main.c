@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "main.h"
 
 /**
- * * print_alphabet_x10 - Entry point of the program
-   *
-     * Return: 1 (Success)
-   */
+* print_alphabet_x10 - Entry point of the program
+*
+* Return: 1 (Success)
+*/
 
 int main()
 {
