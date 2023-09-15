@@ -9,22 +9,22 @@
  * Return: 0 (Success)
  */
 
-int main()
+int main(void)
 {
 	char c;
 	int r;
 	int a = _isdigit('0');
 	int b = _isdigit('a');
 
-	c='0';
-	r= _putchar(c);
+	c = '0';
+	r =  _putchar(c);
 	_isdigit(r);
 	_putchar(':');
 	_putchar(' ');
 	_putchar(a + '0');
 	_putchar('\n');
-	c='a';
-	r= _putchar(c);
+	c = 'a';
+	r =  _putchar(c);
 	_isdigit(r);
 	_putchar(':');
 	_putchar(' ');
