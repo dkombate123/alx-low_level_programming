@@ -4,13 +4,14 @@
 
 
 /**
- * print_alphabet_x10 - Entry point of the program
+ * _islower - Entry point of the program
+ * @c: is the character to check
  *
- * Return: 1 (Success)
+ * Return: 1 (character) and 0(not character)
  */
 int _islower(int c)
 {
-	if(islower(c))
+	if (islower(c))
 		return (1);
 	else
 		return (0);
