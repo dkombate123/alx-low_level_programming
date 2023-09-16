@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <unistd.h>
+
 #include "main.h"
 /**
  * print_last_digit - function to return last digit
