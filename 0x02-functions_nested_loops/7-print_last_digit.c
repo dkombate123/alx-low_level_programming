@@ -15,7 +15,7 @@ int print_last_digit(int a)
 {
 	int ld;
 
-       	if (a == INT_MIN)
+	if (a == INT_MIN)
 	{
 		ld = 8;
 	}
