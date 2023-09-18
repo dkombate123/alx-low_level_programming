@@ -3,7 +3,7 @@
 /**
  * reset_to_98 - function to changue value with pointer
  *
- *@n:variable pointer 
+ *@n:variable pointer
  * Return: to return value
  */
 void reset_to_98(int *n)
