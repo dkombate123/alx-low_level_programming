@@ -14,9 +14,9 @@ void rev_string(char *s)
 
 	for (; start < end; start++, end--)
 	{
-		char temporaire = str[start];
+		char temporaire = s[start];
 
-		s[start] = str[end];
+		s[start] = s[end];
 		s[end] = temporaire;
 	}
 }
