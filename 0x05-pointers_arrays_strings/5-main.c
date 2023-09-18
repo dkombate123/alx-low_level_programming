@@ -14,7 +14,7 @@ int main(void)
 {
 	char *str = "KOMBATE DANDIEGOU";
 
-	puts(str);
+	_puts(str);
 	_putchar('\n');
 	print_rev(str);
 	_putchar('\n');
