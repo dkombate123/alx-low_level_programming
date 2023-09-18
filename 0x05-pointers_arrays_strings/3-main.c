@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int *str = "KOMBATE DANDIEGOU";
+	char *str = "KOMBATE DANDIEGOU";
 
 	_puts(str);
 	return (0);
