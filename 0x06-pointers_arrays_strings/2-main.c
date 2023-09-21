@@ -5,10 +5,10 @@
 #include "main.h"
 #include <string.h>
 /**
- *  * main - Entry point of the program
- *   *
- *    * Return: 0 (Success)
- *     */
+ * main - Entry point of the program
+ *
+ * Return: 0 (Success)
+ */
 
 int main(void)
 {
@@ -60,4 +60,4 @@ int main(void)
 	}
 	_putchar('\n');
 	return (0);
-}   
+}
