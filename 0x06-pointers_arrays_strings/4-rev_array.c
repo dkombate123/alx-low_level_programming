@@ -13,7 +13,7 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i, num;
+	int i, num, divisor;
 
 	for (i = n - 1; i >= 0; i--)
 	{
@@ -28,9 +28,7 @@ void reverse_array(int *a, int n)
 			_putchar('-');
 			num = -num;
 		}
-
-		int divisor = 1;
-
+		divisor = 1;
 		while (num / divisor >= 10)
 		{
 			divisor *= 10;
