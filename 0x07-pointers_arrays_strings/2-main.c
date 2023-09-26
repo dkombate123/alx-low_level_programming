@@ -16,5 +16,6 @@ int main(void)
 	{
 		printf("%s\n", f);
 	}
+	printf("\n");
 	return (0);
 }
