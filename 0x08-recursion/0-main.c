@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	_puts_recursion("Puts with recursion Kombate Dandiegou");
+	_puts_recursion("Puts with recursion Kombate Dandiegou\n");
 	_putchar('\n');
 	return (0);
 }
