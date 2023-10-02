@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int i;
 	int entier[3];
 	int somme = 1;
+	char *endptr;
 
 	if (argc < 3)
 	{
@@ -21,10 +22,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		entier[i - 1] = atoi(argv[i]);
+		entier[i - 1] = strtol(argv[i], &endptr, 10);
 	}
 	for (i = 0; i < argc - 1; i++)
 	{
+		if (*endptr != '\0')
+		{
+			printf("Erreur de conversion.\n");
+		}
 		somme *= entier[i];
 	}
 	printf("%d\n", somme);
