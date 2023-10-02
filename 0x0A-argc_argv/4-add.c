@@ -10,11 +10,11 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int entier[argc - 1];
+	int *entier = (int *)malloc((argc - 1) * sizeof(int));
 	int somme = 0;
 	char *endptr;
 
-	if (argc < 1)
+	if (argc < 2)
 	{
 		printf("0\n");
 	}
@@ -28,10 +28,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; i < argc - 1; i++)
+	else
 	{
-		somme += entier[i];
+		for (i = 0; i < argc - 1; i++)
+		{
+			somme += entier[i];
+		}
+		printf("%d\n", somme);
 	}
-	printf("%d\n", somme);
 	return (0);
 }
