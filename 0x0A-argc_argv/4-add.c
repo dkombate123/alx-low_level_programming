@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  *main - principal function
  * @argc: The character to print
@@ -21,12 +22,16 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
+		if (isalpha(*argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
 		entier[i - 1] = strtol(argv[i], &endptr, 10);
 	}
 	if (*endptr != '\0')
 	{
-		printf("Error\n");
-		return (1);
+		return (-1);
 	}
 	else
 	{
@@ -36,5 +41,6 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", somme);
 	}
+	free(entier);
 	return (0);
 }
