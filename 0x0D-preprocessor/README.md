@@ -1,1 +1,1 @@
-readme for preprocessor defenition et implementation 
+commit for function macro
