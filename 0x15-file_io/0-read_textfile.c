@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+/**
+ * read_textfile - check the code
+ *@letters: var2
+ *@filename:var1
+ *
+ * Return: Always 0.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *file = fopen(filename, "r");
