@@ -24,14 +24,17 @@ void error_exit(const char *message)
 void display_elf_header(Elf64_Ehdr *header)
 {
 	int i;
+
 	printf("Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", header->e_ident[i]);
 	}
 	printf("\n");
-	printf("Class:%s\n", (header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
-	printf("Data:%s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's," : "2's c, big end");
+	printf("Class:%s\n", (header->e_ident[EI_CLASS] == ELFCLASS32) ?
+			"ELF32" : "ELF64");
+	printf("Data:%s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ?
+			"2's," : "2's c, big end");
 	printf("Version:%d (current)\n", header->e_ident[EI_VERSION]);
 	printf("OS/ABI:%d\n", header->e_ident[EI_OSABI]);
 	printf("ABI Version:%d\n", header->e_ident[EI_ABIVERSION]);
