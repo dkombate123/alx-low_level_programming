@@ -5,6 +5,17 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 /**
+ *error_exit - check the code
+ *@message:var1
+ *@exit_code:var2
+ *
+ */
+void error_exit(const char *message, int exit_code)
+{
+	dprintf(2, "%s\n", message);
+	exit(exit_code);
+}
+/**
  * main - check the code
  *@argv:var1
  *@argc:var2
@@ -23,41 +34,30 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", argv[0]);
-		exit(97);
+		error_exit("Usage: cp file_from file_to", 97);
 	}
 	if (source_fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
-		exit(98);
+		error_exit("Error: Can't read from file", 98);
 	}
 	if (target_fd == -1)
 	{
-		dprintf(2, "Error: Can't write to file %s\n", file_to);
-		close(source_fd);
-		exit(99);
+		error_exit("Error: Can't write to file", 99);
 	}
 	while ((bytes_read = read(source_fd, buffer, sizeof(buffer))) > 0)
 	{
 		if (write(target_fd, buffer, bytes_read) == -1)
 		{
-			dprintf(2, "Error: Can't write to file %s\n", file_to);
-			close(source_fd);
-			close(target_fd);
-			exit(99);
+			error_exit("Error: Can't write to file", 99);
 		}
 	}
 	if (bytes_read == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
-		close(source_fd);
-		close(target_fd);
-		exit(98);
+		error_exit("Error: Can't read from file", 98);
 	}
 	if (close(source_fd) == -1 || close(target_fd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd\n");
-		exit(100);
+		error_exit("Error: Can't close fd", 100);
 	}
 	return (0);
 }
