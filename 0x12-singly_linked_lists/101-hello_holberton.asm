@@ -5,6 +5,8 @@ section .data
 section .text
     global main
 
+extern printf                 ; Déclarez la fonction printf comme externe
+
 main:
     ; Call printf with our string
     push rdi                ; Preserve RDI (callee-saved register)
