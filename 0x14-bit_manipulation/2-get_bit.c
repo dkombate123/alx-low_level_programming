@@ -10,7 +10,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int maxIndex = sizeof(n) * 8 - 1;
+	unsigned int maxIndex = sizeof(n) * 8 - 1;
 	unsigned long int mask = 1UL << index;
 
 	if (index > maxIndex)
