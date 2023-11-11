@@ -42,7 +42,9 @@ int get_word_length(char *str) {
 char **strtow(char *str) {
 	     int currentWord = 0;
 	          int numWords = count_words(str);
+		  int i;
 		      char **result = (char **)malloc((numWords + 1) * sizeof(char *));
+		       int wordLength = get_word_length(str);
 		          if (str == NULL || *str == '\0') {
 				          return NULL;
 					      }
@@ -56,10 +58,10 @@ char **strtow(char *str) {
 						          if (*str == '\0') {
 								              break;
 									              }
-							          int wordLength = get_word_length(str);
+							   
 								          result[currentWord] = (char *)malloc((wordLength + 1) * sizeof(char));
 									          if (result[currentWord] == NULL) {
-											              for (int i = 0; i < currentWord; i++) {
+											              for (i = 0; i < currentWord; i++) {
 													                      free(result[i]);
 															                  }
 												                  free(result);
