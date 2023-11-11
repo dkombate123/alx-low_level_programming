@@ -11,19 +11,20 @@ void print_binary(unsigned long int n)
 {
 	int bits = sizeof(n) * 8;
 	int i;
+	int leadingZero = 1;
 
 	for (i = bits - 1; i >= 0; i--)
 	{
 		unsigned long int mask = 1UL << i;
 
-		if ((n & mask) != 0)
+		if ((n & mask) != 0 || i == 0)
 		{
-			_putchar('1');
+			leadingZero = 0;
+			_putchar('0' + ((n & mask) != 0));
 		}
-		else
+		else if (!leadingZero)
 		{
 			_putchar('0');
 		}
 	}
-	_putchar('\n');
 }
